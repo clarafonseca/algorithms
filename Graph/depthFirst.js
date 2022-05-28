@@ -1,10 +1,11 @@
 /**
- * depthFirstTraversal
+ * depthFirst
  * @param {Object} g directed graph
  * @param {*} o origin
  */
 const depthFirst = (g, o) => {
   const stack = [o];
+  // WARNING: POTENTIAL LOOP, WE NEED TO MARK THIS AS AN EXPLORED NODE
   const exploredNodes = {}
 
   while(stack.length > 0) {
@@ -45,7 +46,7 @@ const graph1 = {
 
  const graph2 = {
     a: ['e'],
-    b: ['a'], // WARNING: POTENTIAL LOOP, WE NEED TO MARK THIS AS AN EXPLORED NODE
+    b: ['a'],
     c: ['b', 'd'],
     d: ['f'],
     e: ['c'],
