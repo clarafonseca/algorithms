@@ -74,7 +74,7 @@ const graph1 = {
   *  |          
   *  B —— D —— F
   */
-  const graphUndirectional = {
+  const graphUndirected = {
     a: ['b', 'c'],
     b: ['a', 'd'],
     c: ['a', 'e'],
@@ -87,4 +87,4 @@ console.log(depthFirst(graph1, 'a')); // a, e
 console.log(depthFirst(graph1, 'b')); // b, c, d, f, e, a
 console.log(depthFirst(graph2, 'a')); // a, e, c, d, f, b
 console.log(depthFirst(graph3, 'a')); // a, c, e, b, d, f
-console.log(depthFirst(graphUndirectional, 'a')); // a, c, e, b, d, f
+console.log(depthFirst(graphUndirected, 'a')); // a, c, e, b, d, f
