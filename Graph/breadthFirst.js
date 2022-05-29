@@ -70,8 +70,24 @@
       f: []
   }
   
+  /**
+  *  A —— C —— E
+  *  |          
+  *  B —— D —— F
+  */
+ 
+  const graphUndirected = {
+    a: ['b', 'c'],
+    b: ['a', 'd'],
+    c: ['a', 'e'],
+    d: ['f', 'b'],
+    e: ['c'],
+    f: ['d']
+  }
+  
   console.log(breadthFirst(graph1, 'a')); // a, e 
   console.log(breadthFirst(graph1, 'b')); // b, a, c, e, d, f
   console.log(breadthFirst(graph2, 'a')); // a, e, c, b, d, f
   console.log(breadthFirst(graph3, 'a')); // a, b, c, d, e, f
+  console.log(breadthFirst(graphUndirected, 'a')); // a, b, c, d, e, f
   
